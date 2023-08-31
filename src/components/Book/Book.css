@@ -52,8 +52,8 @@
 } 
 
 .single-book button:hover{
-    background-color:orange;
+    background-color:teal;
     cursor: pointer;
-    color: black;
+    color: yellow;
     font-weight: 700;
 }
