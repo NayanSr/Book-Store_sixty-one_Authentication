@@ -17,7 +17,12 @@ const Book = (props) => {
         <h4>Publidher: {publisher.name}</h4>
         <p>Price: {price}</p>
       </div>
-      <button onClick={() => handelAddToCart(props.book)}>Add to cart</button>
+      <button
+        className="button-add"
+        onClick={() => handelAddToCart(props.book)}
+      >
+        Add to cart
+      </button>
     </div>
   );
 };
