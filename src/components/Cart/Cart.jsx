@@ -7,9 +7,12 @@ const Cart = (props) => {
 
   let total = 0;
   let totalDelivery = 0;
+  let quantity = 0;
   for (const book of cart) {
-    total = total + parseInt(book.price);
-    totalDelivery = totalDelivery + parseInt(book.delivery);
+    book.quantity = book.quantity || 1;
+    total = total + parseInt(book.price) * book.quantity;
+    totalDelivery = totalDelivery + parseInt(book.delivery) * book.quantity;
+    quantity = quantity + book.quantity;
   }
   // console.log(cart);
 
@@ -19,7 +22,7 @@ const Cart = (props) => {
   return (
     <div className="cart">
       <h2>Order Summary</h2>
-      <p>selected Item : {cart.length}</p>
+      <p>selected Item : {quantity}</p>
       <p>Total Price:{total.toFixed(2)}</p>
       <p>Total Delivery: {totalDelivery.toFixed(2)}</p>
       <p>Tax: {tax.toFixed(2)}</p>

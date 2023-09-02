@@ -33,6 +33,7 @@ const Shop = () => {
     }
     setCart(savedCart);
   }, [books]);
+  // }, [books, cart]);
 
   const handelAddToCart = (book) => {
     const newCart = [...cart, book];
