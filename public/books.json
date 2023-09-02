@@ -23,7 +23,8 @@
         }
       ],
       "rating": 4.5,
-      "price": "90"
+      "price": "90",
+      "delivery":"9"
     },
     {
       "title": "Book 2",
@@ -48,7 +49,8 @@
         }
       ],
       "rating": 4.8,
-      "price": "120"
+      "price": "120",
+      "delivery":"12"
     },
     {
       "title": "Book 3",
@@ -73,7 +75,8 @@
         }
       ],
       "rating": 4.2,
-      "price": 80
+      "price": 80,
+      "delivery":"8"
     },
     {
       "title": "Book 4",
@@ -99,7 +102,8 @@
         }
       ],
       "rating": 4.6,
-      "price": "95"
+      "price": "95",
+      "delivery":"10"
     },
     {
       "title": "Book 5",
@@ -124,7 +128,8 @@
         }
       ],
       "rating": 3.3,
-      "price": 110
+      "price": 110,
+      "delivery":"11"
     },
     {
       "title": "Book 6",
@@ -149,7 +154,8 @@
         }
       ],
       "rating": 4.1,
-      "price": "85"
+      "price": "85",
+      "delivery":"9"
     },
     {
       "title": "Book 7",
@@ -175,7 +181,8 @@
         }
       ],
       "rating": 4.7,
-      "price": 105
+      "price": 105,
+      "delivery":"10"
     },
     {
       "title": "Book 8",
@@ -200,7 +207,8 @@
         }
       ],
       "rating": 4.4,
-      "price": "95"
+      "price": "95",
+      "delivery":"10"
     },
     {
       "title": "Book 9",
@@ -226,7 +234,8 @@
         }
       ],
       "rating": 4.9,
-      "price": "115"
+      "price": "115",
+      "delivery":"11"
     },
     {
       "title": "Book 10",
@@ -251,6 +260,7 @@
         }
       ],
       "rating": 3.9,
-      "price": 75
+      "price": 75,
+      "delivery":"8"
     }
   ]
