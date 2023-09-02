@@ -11,7 +11,7 @@ const Cart = (props) => {
     total = total + parseInt(book.price);
     totalDelivery = totalDelivery + parseInt(book.delivery);
   }
-  console.log(cart);
+  // console.log(cart);
 
   const tax = total * (7 / 100);
   const grandTotal = total + totalDelivery + tax;

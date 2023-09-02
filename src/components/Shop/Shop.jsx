@@ -4,11 +4,7 @@ import "./Shop.css";
 import { useEffect } from "react";
 import Book from "../Book/Book";
 import Cart from "../Cart/Cart";
-import {
-  addToDb,
-  getStoredShopingCart,
-  removeOneFromDb,
-} from "../../../fackDb";
+import { addToDb, getStoredShopingCart } from "../../../fackDb";
 
 const Shop = () => {
   const [books, setBooks] = useState([]);
@@ -22,8 +18,21 @@ const Shop = () => {
 
   useEffect(() => {
     const storedCart = getStoredShopingCart();
-    console.log(storedCart);
-  }, []);
+    const savedCart = [];
+    //?  getting id from storedCart in local storage
+    for (const id in storedCart) {
+      //? finding that books which id is saved in local storage cart
+      const addedBook = books.find((book) => book.id === parseInt(id));
+      //? setting local storage / db id's quantity in addedBooks quantity
+      if (addedBook) {
+        const quantity = storedCart[id];
+        addedBook.quantity = quantity;
+        savedCart.push(addedBook);
+      }
+      console.log(addedBook);
+    }
+    setCart(savedCart);
+  }, [books]);
 
   const handelAddToCart = (book) => {
     const newCart = [...cart, book];
