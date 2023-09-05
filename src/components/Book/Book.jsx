@@ -3,7 +3,8 @@ import "./Book.css";
 
 const Book = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { title, img, author, publisher, price } = props.book;
+  const { title, img, publisher, price } = props.book;
+  // eslint-disable-next-line react/prop-types
   const handelAddToCart = props.handelAddToCart;
 
   return (

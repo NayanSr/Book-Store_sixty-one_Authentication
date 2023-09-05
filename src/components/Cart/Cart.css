@@ -2,8 +2,8 @@
 
 .cart {
     color:rgb(0, 0, 0);
-    position:fixed;
-    top:120px;
+    position:sticky;
+    top:0px;
     background-color: rgba(241, 173, 24, 0.2);
     height: 800px;
     width: 90%;

@@ -9,10 +9,11 @@ const Cart = (props) => {
   let totalDelivery = 0;
   let quantity = 0;
   for (const book of cart) {
+    // console.log(book);
     book.quantity = book.quantity || 1;
     total = total + parseInt(book.price) * book.quantity;
     totalDelivery = totalDelivery + parseInt(book.delivery) * book.quantity;
-    quantity = quantity + book.quantity;
+    quantity = book.quantity + quantity;
   }
   // console.log(cart);
 

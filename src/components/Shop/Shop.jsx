@@ -10,6 +10,13 @@ const Shop = () => {
   const [books, setBooks] = useState([]);
   const [cart, setCart] = useState([]);
 
+  const handelAddToCart = (bookFromOnClickParam) => {
+    const newCart = [...cart, bookFromOnClickParam];
+    addToDb(bookFromOnClickParam.id);
+    setCart(newCart);
+    console.log(bookFromOnClickParam);
+  };
+
   useEffect(() => {
     fetch("books.json")
       .then((res) => res.json())
@@ -29,17 +36,11 @@ const Shop = () => {
         addedBook.quantity = quantity;
         savedCart.push(addedBook);
       }
-      console.log(addedBook);
+      // console.log(addedBook);
     }
     setCart(savedCart);
   }, [books]);
   // }, [books, cart]);
-
-  const handelAddToCart = (book) => {
-    const newCart = [...cart, book];
-    setCart(newCart);
-    addToDb(book.id);
-  };
 
   return (
     <div className="shop-container">
