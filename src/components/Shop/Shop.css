@@ -22,3 +22,26 @@
     margin: 10px;
 
 }
+
+.shop-review-orders{
+    width:95%;
+   height: 70px;
+   margin-top: 25px;
+   background-color: rgb(228, 137, 18);
+   color: rgb(0, 0, 0);
+   font-size: 25px;
+   cursor: pointer;
+   border-radius: 15px;
+   border: 0;
+}
+
+
+    /* height: 70px;
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    text-decoration: none;
+    */ 
+

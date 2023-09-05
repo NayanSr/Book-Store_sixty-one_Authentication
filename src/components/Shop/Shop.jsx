@@ -4,7 +4,12 @@ import "./Shop.css";
 import { useEffect } from "react";
 import Book from "../Book/Book";
 import Cart from "../Cart/Cart";
-import { addToDb, getStoredShopingCart } from "../../../fackDb";
+import {
+  addToDb,
+  deleteStoredShopingCart,
+  getStoredShopingCart,
+} from "../../../fackDb";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [books, setBooks] = useState([]);
@@ -15,6 +20,11 @@ const Shop = () => {
     addToDb(bookFromOnClickParam.id);
     setCart(newCart);
     console.log(bookFromOnClickParam);
+  };
+
+  const handleClearCart = () => {
+    setCart([]);
+    deleteStoredShopingCart();
   };
 
   useEffect(() => {
@@ -54,7 +64,11 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} handleClearCart={handleClearCart}>
+          <Link to="/orders">
+            <button className="shop-review-orders">Review Orders</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );
