@@ -12,6 +12,7 @@ import cartBooksLoader from "./loaders/cartBookLoader";
 import CheckOut from "./components/CheckOut/CheckOut";
 import Signup from "./components/Signup/Signup";
 import AuthProvider from "./providers/AuthProvider";
+import PrivateRoute from "./routes/PrivateRoute";
 // import Signup from "./components/Layout/Signup/Signup";
 
 const router = createBrowserRouter([
@@ -28,10 +29,24 @@ const router = createBrowserRouter([
         // loader: () => fetch("books.json"),
       },
 
-      { path: "/inventory", element: <Inventory /> },
+      {
+        path: "/inventory",
+        element: (
+          <PrivateRoute>
+            <Inventory />
+          </PrivateRoute>
+        ),
+      },
       { path: "/login", element: <Login /> },
       { path: "/signup", element: <Signup /> },
-      { path: "checkOut", element: <CheckOut /> },
+      {
+        path: "checkOut",
+        element: (
+          <PrivateRoute>
+            <CheckOut />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);

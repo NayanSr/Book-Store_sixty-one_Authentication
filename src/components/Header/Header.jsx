@@ -9,7 +9,9 @@ export default function Header() {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogout = () => {
-    logOut();
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error.message));
   };
 
   return (
@@ -23,21 +25,26 @@ export default function Header() {
         <Link to="/signup">Signup</Link>
         {user && (
           <span>
-            <p style={{ display: "inline", color: "green", fontSize: "1.5em" }}>
-              Name: {user.name}
-            </p>
             <button
               style={{
-                width: "200px",
+                width: "150px",
                 height: "50px",
                 fontSize: "25px",
                 backgroundColor: "tomato",
                 marginLeft: "15px",
+                border: "none",
+                borderRadius: "10px",
+                color: "yellow",
               }}
               onClick={handleLogout}
             >
               Signout
             </button>
+            <small
+              style={{ marginLeft: "20px", fontSize: "1.25em", color: "black" }}
+            >
+              : {user.email}
+            </small>
           </span>
         )}
       </div>

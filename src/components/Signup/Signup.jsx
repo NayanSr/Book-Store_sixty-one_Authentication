@@ -44,7 +44,7 @@ const Signup = () => {
           <input
             type="email"
             name="email"
-            id=""
+            id="123"
             required
             placeholder="Your Email"
           />
@@ -54,7 +54,7 @@ const Signup = () => {
           <input
             type="password"
             name="password"
-            id=""
+            id="213"
             required
             placeholder="Your Password"
           />
@@ -64,7 +64,7 @@ const Signup = () => {
           <input
             type="password"
             name="confirm"
-            id=""
+            id="312"
             required
             placeholder="Your Password"
           />
